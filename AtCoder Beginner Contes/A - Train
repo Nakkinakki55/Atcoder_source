@@ -1,0 +1,16 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+    
+    //--------------------------------------
+    //問題
+    //https://atcoder.jp/contests/abc107/tasks/abc107_a
+    //--------------------------------------
+    int N,M;
+    cin >> N >> M;
+
+    cout << N - M + 1 << endl;
+    return 0;
+}
+
