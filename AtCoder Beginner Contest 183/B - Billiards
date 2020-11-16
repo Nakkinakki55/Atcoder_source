@@ -1,0 +1,25 @@
+#include <iostream>
+#include <iostream>
+#include <iomanip>
+#include <vector>
+using namespace std;
+
+//https://atcoder.jp/contests/abc183/tasks/abc183_b
+
+int main() {
+    
+    double a,b,c,d;
+    cin >> a>>b>>c>>d;
+
+    if (c < a)
+    {
+        swap(c, a);
+        swap(d, b);
+    }
+
+    double dis = abs(a - c);
+    double out = dis * (abs(b) / (abs(b) + abs(d)));
+    double ddd = a + out;
+    cout << fixed << setprecision(10) << ddd;
+    return 0;
+}
