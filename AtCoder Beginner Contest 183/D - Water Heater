@@ -1,0 +1,55 @@
+#include <iostream>
+#include <iostream>
+#include <iomanip>
+#include <vector>
+using namespace std;
+
+//https://atcoder.jp/contests/abc183/tasks/abc183_d
+
+int main() {
+    
+    
+    long long per, water;
+    cin >> per >> water;
+    vector<vector<long long>> data(per, vector<long long>(100001));
+
+    long long num = 0;
+
+    for (long long i = 0; i < per; i++)
+    {
+        long long A, B,C;
+        cin >> A >> B >> C;
+        B = B - 1;
+        
+
+        for (long long n = A; n <= B; n++)
+        {
+            data[num][n] = C;
+        }
+
+        num++;
+    }
+    long long longMax = 0;
+
+    for (long long i = 0; i < 100001; i++)
+    {
+        long long sum = 0;
+        for (long long nnn = 0; nnn < per; nnn++)
+        {
+            sum = sum + data[nnn][i];
+        }
+
+        longMax = max(longMax, sum);
+    }
+
+    if (longMax <= water)
+    {
+        cout << "Yes";
+    }
+    else
+    {
+        cout << "No";
+    }
+
+    return 0;
+}
