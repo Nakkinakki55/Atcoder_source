@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+//https://atcoder.jp/contests/abc183/tasks/abc183_a
+
+int main() {
+    
+    int N;
+    cin >> N;
+
+    if (N >= 0)
+    {
+        cout << N;
+    }
+    else
+    {
+        cout << 0;
+    }
+
+    return 0;
+}
